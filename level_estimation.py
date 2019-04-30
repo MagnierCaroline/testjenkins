@@ -11,7 +11,7 @@ class level_estimation():
         idxs_deb = find(  cumsumdatasquare <= 0.05*lastvalue )
         self.idx_deb = 0
         if np.size( idxs_deb) !=0 :
-            self.idx_deb = idxs_deb[-1]
+            self.idx_deb = idxs_deb[-100]
 
         idxs_end = find(  cumsumdatasquare >= 0.95*lastvalue )
         self.idx_end = 0
